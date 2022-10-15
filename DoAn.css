@@ -1,0 +1,373 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    /* height: 400vh; */
+    background-color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    
+}
+
+.header{
+    background-color: rgb(246, 249, 248);
+}
+.header marquee{
+    text-transform: capitalize;
+    font-size: x-large;
+    font-family: 'Courier New', Courier, monospace;
+    color: steelblue;
+}
+.logo{
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color:rgb(168, 201, 59);
+}
+.logo span{
+    color:rgb(215, 78, 124);
+}
+
+
+/* ---------------THANH DIEU HUONG------------- */
+.navigation{
+    background-color: rgb(12, 90, 90);
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.navigation ul{
+    list-style: none;
+    display: flex;
+} 
+.navigation ul li{
+    position: relative;
+    padding: 0.8rem;
+    
+}
+.navigation ul li a{ 
+    font-weight: 600;
+    text-decoration: none;
+    color: #b1bb2e;
+}
+
+.navigation .sign-in a{
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.navigation ul li a:hover{
+    color:black;
+    transition: 0.2s linear;
+}
+/* noi dung dropdown : link1 link2 link3 link4 */
+.noidung-dropdown{
+    display: none;
+    background-color: rgb(214, 192, 168);
+}
+.noidung-dropdown ul{
+    display: block;
+}
+
+.navigation ul li:hover .noidung-dropdown{
+    display: block;
+    position: absolute;
+    top:100%;
+    color: black;
+    opacity: 0.7;
+}
+.noidung-dropdown ul li{
+    width: 150px;
+    padding: 10px;
+}
+
+/* -------------SAN PHAM----------------- */
+.main{
+    background-color:aliceblue;
+    width: 100%;
+}
+.main-loc{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sign-in ul li:hover .noidung-dropdown{
+    position: absolute;
+    right: 0;
+}
+
+.main .image img{
+    max-width: 100%;
+}
+.best-seller{
+    margin:50px 0 30px 0;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+.main .main-phu{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 10px 15px;
+    gap: 0.8rem; 
+}
+
+.main-phu a{
+    text-decoration: none;
+}
+.main-phu span{
+    text-decoration: underline;
+}
+.main .content1{
+}
+
+.main .content2{
+
+}
+.main .content3{
+
+}
+.anhsp img{
+    max-width: 100%;
+}
+
+.aboutsp{
+    padding: 20px;
+}
+.tensp p{
+    margin: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+.giasp{
+    display: flex;
+    gap:1rem;
+    justify-content: center;
+}
+.giagiam a{
+    color: red;
+}
+.giagoc a{
+    color: darkgray;
+    text-decoration: line-through;
+}
+
+/* -------------FOOTER-------------------- */
+
+.footer{
+    background-color: black;
+    margin-top: 20px;
+}
+.cover-footer{
+    padding: 20px;
+    /* display: grid;
+    grid-template-columns: 1fr 1.5fr; */
+    /* height: 300px; */
+}
+.left-right{
+    display: flex;
+    /* gap: 4rem; */
+    justify-content:stretch;
+}
+.Tieude{
+    font-size: larger;
+    color: aliceblue;
+}
+.left-footer{
+    flex: 1;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+}
+.left-footer a{
+    text-decoration: none;
+    color: darkcyan;
+    word-spacing: 2px;
+}
+.left-footer li{
+    padding: 7px 20px;
+    list-style: none;
+}
+
+.right-footer{
+    flex: 2;
+    background-color: rgb(5, 5, 5);
+    padding: 20px 50px;
+}
+.right-footer li{
+    padding: 10px;
+    list-style: none;
+}
+
+i{
+    color: darkcyan;
+}
+.right-footer span{
+    text-decoration: none;
+    color: rgb(240, 241, 241);
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+
+.end-footer{
+    background-color: rgb(0, 0, 0);
+    height: 50px;
+    padding: 10px;
+}
+.end-footer li{
+    padding: 10px 30px;
+    word-spacing: 10px;
+    font-size: larger;
+}
+
+input{
+    border-radius: 40px;
+    border: none;
+    font-size: 18px;
+}
+
+@media screen and (max-width:912px){
+    body{
+        font-size: 13px;
+    }
+    .navigation{
+        height: 35px;
+    }
+    .navigation .logo{
+        font-size: 20px;
+    }
+    input{
+        border-radius: 40px;
+        border: none;
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (max-width:712px){
+
+    body{
+        font-size: 8px;
+    }
+    .logo{
+        font-size: 1.2rem;
+    }
+    .navigation{
+        height: 20px;
+    }
+    .navigation ul li{
+        padding: 0.3rem;
+    }
+    .navigation .sign-in li i{
+        padding: 20px 0px;
+        right: 0;
+    }
+    .best-seller{
+        font-size: 20px;
+    }
+    .main .main-phu{
+        grid-template-columns: repeat(2,1fr);
+        padding: 10px 15px;
+        gap: 0.5rem; 
+    }
+    .left-footer{
+        flex: 1.5;
+        margin: 0;
+        padding:0;
+         /*khong cho xuong dong  */
+        white-space: nowrap; 
+    }
+    .right-footer{
+        flex: 3;
+        margin:0;
+        padding: 0;
+    }
+
+    .end-footer li{
+        padding:10px;
+        word-spacing: 10px;
+        font-size: larger;
+    }
+    input{
+        border-radius: 40px;
+        border: none;
+        font-size: 8px;
+    }
+
+}
+
+@media screen and (max-width:412px){
+    body{
+        font-size: 6px;
+    }
+    .footer{
+        background-color: black;
+        padding: 0;
+        margin: 0;
+    }
+
+    .left-footer{
+        height: 10px;
+    }
+    .left-footer a{
+        display: none;
+    }
+    .right-footer{
+        height: 10px;
+        padding: 0;
+    }
+    .right-footer li i{
+        display: none;
+    }
+    .right-footer li span{
+        display: none;
+    }
+    .right-footer li {
+        padding: 0;
+    }
+    .left-footer li {
+        padding: 0;
+    }
+    .left-right{
+        justify-content:flex-start;
+
+    }
+    .end-footer{
+        padding: 10px;
+        white-space: nowrap;
+    }
+    .cover-footer{
+        display: grid;
+        grid-template-columns: 1.5fr 0.5fr;
+        padding: 0;
+        text-align: center;
+    }
+    hr{
+        display: none;
+    }
+    .Tieude{
+        padding:20px;
+        color: rgb(30, 158, 158);
+        white-space: nowrap;
+    }
+    input{
+        display: none;
+    }
+}
+
+
